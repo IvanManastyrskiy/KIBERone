@@ -675,6 +675,28 @@
     font-weight: 200;
 }
 
+/*--------------------- Страница thanks и error----------------------- */
+
+.thanks-block, .error-block{
+    padding: 70px 0 200px 0;
+}
+
+.thanks-block__title, .thanks-block__subtitle, .error-block__title, .error-block__subtitle{
+    text-align: center;
+    color: var(--dark-gray-col);
+}
+
+.thanks-block__title, .error-block__title{
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.thanks-block__subtitle, .error-block__subtitle{
+    font-size: 25px;
+    font-weight: 500;
+}
+
 /*----------------------
     Медиа запросы
 ------------------------*/

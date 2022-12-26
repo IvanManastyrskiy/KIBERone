@@ -8,9 +8,10 @@ try{
     $msg = $conn->prepare($query);
     $msg->execute(['name' => $_POST['name'], 'phone' => $_POST['phone']]);
 
-    header("Location: contacts.html");
+    header("Location: thanks.html");
 } catch (PDOException $e){
-    echo "error" . $e->getMessage();
+    // echo "error" . $e->getMessage();
+    header("Location: error.html");
 };
 
 ?>
