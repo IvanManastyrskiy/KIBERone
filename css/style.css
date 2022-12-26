@@ -79,6 +79,7 @@
 
 .header__nav{
     width: 100%;
+    position: relative;
 }
 
 .nav__burger-btn{
@@ -171,6 +172,22 @@
     white-space: nowrap;
 }
 
+/* Хлебные крошки */
+
+.bread-crumbs{
+    padding: 50px 0;
+    font-size: 18px;
+}
+
+.bread-crumbs__link{
+    text-decoration: none;
+    color: rgb(66, 126, 255);
+}
+
+.bread-crumbs__link:hover{
+    text-decoration: underline;
+}
+
 /* подвал */
 
 .footer{
@@ -193,6 +210,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .foot-nav__item{
@@ -211,6 +229,132 @@
 .foot-nav__item::after{
     background-color: #fff !important;
 }
+
+/* модалка с формой для записи */
+
+.modal-bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal{
+    width: 50%;
+    min-width: 340px;
+    background-color: #fff;
+    border: 5px solid var(--yellow-col);
+    padding: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.top-cntrls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.top-cntrls__heading{
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.top-cntrls__close-btn{
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--dark-gray-col);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+
+.top-cntrls__close-btn:hover{
+    color: #000;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.form__input-block:last-child{
+    margin-bottom: 0;
+}
+
+.form__input-block > *:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.input-block__label{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.input-block__input{
+    font-size: 16px;
+    width: 250px;
+    padding: 5px 15px;
+    border: 3px solid var(--yellow-col);
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: border 0.3s linear;
+    -webkit-transition: border 0.3s linear;
+    -moz-transition: border 0.3s linear;
+    -ms-transition: border 0.3s linear;
+    -o-transition: border 0.3s linear;
+}
+
+.input-block__input:focus{
+    border: 3px solid #dbb10a;
+}
+
+.input-block__input::placeholder{
+    font-size: 16px;
+}
+
+.input-block__warning-txt{
+    text-align: center;
+    opacity: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: red;
+}
+
+.form__submit-btn{
+    font-size: 18px;
+}
+
+/*--------------------- Главная ----------------------- */
 
 /* welcome block */
 
@@ -444,3 +588,129 @@
     width: 300px;
 }
 
+/*--------------------- Страница с контактами----------------------- */
+
+.contacts-block{
+    margin-bottom: 100px;
+}
+
+.contacts-block__contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    text-align: center;
+}
+
+.contacts__contact-item:last-child{
+    /* margin-bottom: 30px; */
+}
+
+.contact-item__contact-label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-item__contact{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(66, 126, 255);
+}
+
+.contact-item__contact:hover{
+    text-decoration: underline;
+}
+
+/*----------------------
+    Медиа запросы
+------------------------*/
+
+@media (max-width: 930px) {
+    .welcom-block__content{
+        flex-direction: column-reverse;
+    }
+
+    .welcome-txt-block{
+        align-items: center;
+    }
+
+    .welcome-block__img{
+        width: 50%;
+    }
+}
+
+@media (max-width: 760px) {
+    .nav__burger-btn{
+        display: block;
+    }
+
+    .nav__items-list{
+        display: none;
+    }
+
+    .header__nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header__nav:hover > .nav__items-list{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 35px;
+        background-color: #fff;
+        padding: 10px 15px;
+        border: 2px solid var(--dark-gray-col);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+    .about-block__about-media{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .appointment-block__content{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .appointment-block__text{
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .container{
+        width: 92%;
+    }
+
+    .welcom-block__content{
+        row-gap: 15px;
+    }
+
+    .welcome-block__img{
+        width: 80%;
+    }
+
+    .welcome-text__title{
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .welcome-text__kiberone-title{
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .why-block__reasons{
+        padding-left: 20px;
+    }
+
+    .appointment-block__text{
+        font-size: 32px;
+    }
+}
