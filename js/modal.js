@@ -29,3 +29,11 @@ function closeModal() {
         phoneWarningTxt.style.opacity = '0';
     }
 }
+
+document.querySelector('.back-btn').onclick = () => {
+    // переместим в начало страницы
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })}
