@@ -45,7 +45,7 @@
             <div class="welcome-block__welcome-txt-block welcome-txt-block">
 
                 <div class="welcome-txt-block__welcome-text welcome-text">
-                    <p class="welcome-text__title"><br />Добро пожаловать на сайт нашей школы!</p>
+                    <p class="welcome-text__title">Добро пожаловать на сайт нашей школы!</p>
                     <!-- <h1 class="welcome-text__kiberone-title">KIBER ONE</h1> -->
                     <p class="welcome-text__subtitle">У каждого из нас есть свое представление о том, каким должно бытьбудущее наших детей. При этом мы можем не совпадать в частностях, но я уверена,что совпадем в главном: все мы хотим, чтобы наши дети были счастливы и успешны.Сегодня, завтра и всегда. А счастливый ребенок – это ребенок, которого любят,понимают и принимают таким, какой он есть.</p>
                     <p class="welcome-text__subtitle">За окном ускоряет шаг третье тысячелетие, всевозможные новации стремительно вытесняют привычное, освоенное.Это более всего заметно в школе: новые программы и государственные стандарты,новые формы обучения и аттестации… В этом, вероятно, и есть смысл жизни педагогов - находиться всегда в поиске.</p>
@@ -248,12 +248,12 @@
                     </div>
                     <div class="form__input-block">
                         <label for="phone" class="input-block__label">Ваш E-mail</label>
-                        <input type="tel" required title="Номер телефона должен начинаться с +7" minlength="10" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" name="phone" class="input-block__input input-block__phone-input" placeholder="Введите ваш E-mail">
-                        <p class="input-block__warning-txt phone-warning-txt">Введён некорректный номер телефона</p>
+                        <input type="email" required title="Вы ввели не корректные данные" minlength="7" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"  name="phone" class="input-block__input input-block__phone-input" placeholder="Введите ваш E-mail">
+                        <p class="input-block__warning-txt phone-warning-txt">Введён некорректный адрес электронной почты</p>
                     </div>
                     <div class="form__input-block">
                         <label  class="input-block__label">Ваш вопрос</label>
-                        <textarea name="comment "class="input-block__input input-block__phone-input" rows="10" placeholder="Введите ваш вопрос"></textarea>
+                        <textarea name="comment "class="input-block__input input-block__phone-input" minlength="10" rows="10" placeholder="Введите ваш вопрос"></textarea>
                     </div>
                     <button type="submit" class="form__submit-btn neubrutal-btn">Отправить вопрос</button>
                 </form>

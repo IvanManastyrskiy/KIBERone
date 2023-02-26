@@ -426,7 +426,6 @@ border: none;
 .map-block__content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .welcome-txt-block{
